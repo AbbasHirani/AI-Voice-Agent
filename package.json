@@ -1,0 +1,14 @@
+{
+  "name": "ai-calling-agent-poc",
+  "version": "1.0.0",
+  "description": "Step 1 prototype: text-only RAG + escalation logic for an AI customer service agent",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

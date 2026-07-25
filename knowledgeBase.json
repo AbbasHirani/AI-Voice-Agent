@@ -1,0 +1,132 @@
+[
+  {
+    "id": "kb001",
+    "question": "What are your business hours?",
+    "answer": "We're open Monday to Friday, 9am to 6pm UK time. We're closed on weekends and public holidays."
+  },
+  {
+    "id": "kb002",
+    "question": "How do I track my order?",
+    "answer": "You can track your order using the tracking link sent to your email after checkout. If you haven't received it, check your spam folder or ask us to resend it."
+  },
+  {
+    "id": "kb003",
+    "question": "What is your return policy?",
+    "answer": "You can return any item within 30 days of delivery for a full refund, as long as it's unused and in its original packaging."
+  },
+  {
+    "id": "kb004",
+    "question": "How long does delivery take?",
+    "answer": "Standard delivery takes 3 to 5 business days. Express delivery takes 1 to 2 business days."
+  },
+  {
+    "id": "kb005",
+    "question": "Do you deliver internationally?",
+    "answer": "Currently we only deliver within the United Kingdom. We don't offer international shipping at this time."
+  },
+  {
+    "id": "kb006",
+    "question": "How do I cancel my order?",
+    "answer": "You can cancel your order within 1 hour of placing it by contacting us directly. After that, the order may already be processing and cannot be cancelled."
+  },
+  {
+    "id": "kb007",
+    "question": "What payment methods do you accept?",
+    "answer": "We accept all major credit and debit cards, as well as PayPal."
+  },
+  {
+    "id": "kb008",
+    "question": "How do I reset my account password?",
+    "answer": "Click 'Forgot Password' on the login page and follow the instructions sent to your registered email."
+  },
+  {
+    "id": "kb009",
+    "question": "What is the name of your company?",
+    "answer": "Our company name is Arbil."
+  },
+  {
+    "id": "kb010",
+    "question": "What services does Arbil provide?",
+    "answer": "We provide tailor-made solutions including business automated systems, workflow automations, and AI-powered billing systems."
+  },
+  {
+    "id": "kb011",
+    "question": "Can you automate customer service?",
+    "answer": "Yes, we can completely automate customer service by building an AI agent that uses a list of frequently asked questions, previous recordings, and emails to interact with your customers."
+  },
+  {
+    "id": "kb012",
+    "question": "How is pricing structured for AI solutions?",
+    "answer": "Pricing depends on the specific requirements, but it typically involves a model hosting platform and a monthly API cost."
+  },
+  {
+    "id": "kb013",
+    "question": "Can you help with inventory and return reconciliation?",
+    "answer": "Yes, we can build custom solutions to streamline the reconciliation of returns, mismatching serial numbers, and integrate with existing ERP systems like Sage 200."
+  },
+  {
+    "id": "kb014",
+    "question": "Where is Airbil located?",
+    "answer": "Airbil is headquartered in Chennai, Tamil Nadu, India."
+  },
+  {
+    "id": "kb015",
+    "question": "When was Airbil founded and how much experience do you have?",
+    "answer": "Airbil was founded in 2020. We have over 5 years of experience, have delivered 250+ projects, and served 120+ businesses across 6 countries."
+  },
+  {
+    "id": "kb016",
+    "question": "What industries does Airbil serve?",
+    "answer": "Our clients span healthcare, finance, retail, manufacturing, logistics, and professional services across India, the UK, the US, and the UAE."
+  },
+  {
+    "id": "kb017",
+    "question": "What is AI Automation?",
+    "answer": "AI Automation involves eliminating manual work with intelligent pipelines, streamlining your operations for maximum efficiency."
+  },
+  {
+    "id": "kb018",
+    "question": "What are Custom Web Platforms?",
+    "answer": "We build modern, scalable web applications tailored specifically for your business needs."
+  },
+  {
+    "id": "kb019",
+    "question": "What is Multi-Agent AI?",
+    "answer": "Multi-Agent AI is a service where we orchestrate complex workflows using coordinated AI agents that work together to solve complex business problems."
+  },
+  {
+    "id": "kb020",
+    "question": "What are Voice AI Agents?",
+    "answer": "Voice AI Agents are conversational AI systems designed to handle real business interactions over the phone, just like a human representative."
+  },
+  {
+    "id": "kb021",
+    "question": "What is Digital Transformation?",
+    "answer": "Our Digital Transformation service helps modernize your infrastructure with connected systems, ensuring your business stays ahead of the technology curve."
+  },
+  {
+    "id": "kb022",
+    "question": "What is Airbil's mission?",
+    "answer": "We are an AI-native product engineering agency on a mission to help businesses automate operations, build intelligent platforms, and scale with confidence."
+  },
+  {
+    "id": "kb023",
+    "question": "How can I contact Airbil?",
+    "answer": "You can reach us by phone at +91 99520 23960, or by email at hello@airbil.co."
+  },
+  {
+    "id": "kb024",
+    "question": "How many employees does Airbil have?",
+    "answer": "Airbil has a dedicated team of 15 employees."
+  },
+  {
+    "id": "kb025",
+    "question": "What is Airbil's process for working with clients?",
+    "answer": "Our process involves 5 steps: 1) Discovery to understand your goals, 2) Strategy to map out automation, 3) Build using leading AI APIs and modern web platforms, 4) Deploy to scalable cloud infrastructure, and 5) Optimise performance based on real usage data."
+  },
+  {
+    "id": "kb026",
+    "question": "What technologies and tools does Airbil use?",
+    "answer": "We build solutions using LangChain, n8n, leading LLM APIs, and modern web platforms built on React, Next.js, and TypeScript."
+  }
+]

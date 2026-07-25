@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Customer Service Voice Demo</title>
+    <meta name="description" content="A prototype voice agent for customer service">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <header>
+            <h1>AI Support Agent</h1>
+            <p>Tap the microphone to start the call.</p>
+        </header>
+
+        <div id="escalation-banner" class="banner hidden">
+            <span class="icon">⚠️</span> Transferring to a human representative...
+        </div>
+
+        <section class="chat-container" id="chat-log">
+            <!-- Chat messages will be injected here -->
+        </section>
+
+        <div class="controls">
+            <button id="mic-btn" class="mic-button" aria-label="Tap to start call">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mic-icon">
+                  <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                </svg>
+            </button>
+            <p id="status-text" class="status-text">Ready</p>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

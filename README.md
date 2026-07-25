@@ -55,3 +55,22 @@ in later steps once this logic is solid.
 - **Voice**: add speech-to-text in, this same logic in the middle,
   text-to-speech out
 - **Telephony**: connect to a real phone number (Twilio) as the last step
+
+## Twilio Setup (Real Phone Calls)
+
+We've added Twilio integration so you can test this with a real phone number!
+
+1. Sign up for a free [Twilio](https://www.twilio.com/) account and a free [Deepgram](https://deepgram.com/) account.
+2. In Twilio, get your **Account SID** and **Auth Token**. In Deepgram, generate an API Key.
+3. Paste these into your `.env` file.
+4. Run `npm start` to start the local server.
+5. You need a public URL for Twilio to reach your local server. Run localtunnel (no installation required) in a new terminal:
+   ```bash
+   npx localtunnel --port 3000
+   ```
+6. Copy the `https://<random-string>.loca.lt` URL it gives you.
+7. Go to your Twilio console -> Phone Numbers -> Active Numbers.
+8. Click your Twilio phone number, scroll down to **Voice & Fax**.
+9. Under "A CALL COMES IN", set the Webhook to:
+   `https://<random-string>.loca.lt/twilio/voice` (HTTP POST)
+10. Save the changes. Call your Twilio number from your real phone!

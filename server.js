@@ -1,9 +1,16 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
+const crypto = require('crypto');
 const { getAgentResponse } = require('./agent');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const CACHE_DIR = path.join(__dirname, 'audio-cache');
+if (!fs.existsSync(CACHE_DIR)) {
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
+}
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -31,9 +38,29 @@ app.post('/api/chat', async (req, res) => {
 // API Endpoint to handle TTS via ElevenLabs
 app.post('/api/speak', async (req, res) => {
   try {
-    const { text } = req.body;
+    const { text, sourceId } = req.body;
     if (!text) return res.status(400).json({ error: 'Text is required' });
 
+    let cacheKey = null;
+    if (sourceId) {
+      cacheKey = sourceId;
+    } else {
+      cacheKey = crypto.createHash('md5').update(text).digest('hex');
+    }
+
+    const cachePath = path.join(CACHE_DIR, `${cacheKey}.mp3`);
+
+    if (fs.existsSync(cachePath)) {
+      console.log(`[TTS Cache HIT] Serving from cache: ${cacheKey}.mp3`);
+      const buffer = fs.readFileSync(cachePath);
+      res.set({
+        'Content-Type': 'audio/mpeg',
+        'Content-Length': buffer.length
+      });
+      return res.send(buffer);
+    }
+
+    console.log(`[TTS Cache MISS] Calling ElevenLabs API for key: ${cacheKey}`);
     const apiKey = process.env.ELEVENLABS_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'ELEVENLABS_API_KEY is not configured' });
 
@@ -63,6 +90,9 @@ app.post('/api/speak', async (req, res) => {
 
     const arrayBuffer = await response.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
+
+    // Save to cache
+    fs.writeFileSync(cachePath, buffer);
 
     res.set({
       'Content-Type': 'audio/mpeg',

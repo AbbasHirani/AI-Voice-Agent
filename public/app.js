@@ -75,7 +75,7 @@ function appendMessage(text, sender) {
 }
 
 // Speak text using ElevenLabs API with Web Speech fallback
-async function speak(text) {
+async function speak(text, sourceId = null) {
     if (currentAudio) {
         currentAudio.pause();
         currentAudio = null;
@@ -98,7 +98,7 @@ async function speak(text) {
         const response = await fetch('/api/speak', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ text })
+            body: JSON.stringify({ text, sourceId })
         });
         
         if (!response.ok) throw new Error('ElevenLabs API failed');
@@ -156,7 +156,7 @@ async function handleUserMessage(text) {
         });
 
         appendMessage(data.response, 'agent');
-        speak(data.response);
+        speak(data.response, data.sourceId);
 
         if (data.escalate) {
             escalationBanner.classList.remove('hidden');

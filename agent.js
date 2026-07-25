@@ -11,7 +11,7 @@ const knowledgeBase = JSON.parse(
 
 function buildKnowledgeBaseContext() {
   return knowledgeBase
-    .map((entry) => `Q: ${entry.question}\nA: ${entry.answer}`)
+    .map((entry) => `[ID: ${entry.id}] Q: ${entry.question}\nA: ${entry.answer}`)
     .join("\n\n");
 }
 
@@ -37,6 +37,7 @@ RULES:
 You must respond with ONLY a JSON object in this exact format, no other text:
 {
   "response": "what to say to the customer (keep it natural and conversational)",
+  "sourceId": "the ID of the KB entry you used to answer, or null if escalation/no match",
   "escalate": true or false,
   "reason": "brief internal note on why you did or didn't escalate"
 }`;
